@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net7.0-windows</TargetFramework>
+        <Nullable>enable</Nullable>
+        <UseWPF>true</UseWPF>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <None Remove="forest.jpg" />
+      <None Remove="logout.png" />
+      <None Remove="mute.png" />
+      <None Remove="sound.png" />
+      <None Remove="Емблема_ДСНС_України.svg.png" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Resource Include="forest.jpg" />
+      <Resource Include="logout.png" />
+      <Resource Include="mute.png" />
+      <Resource Include="sound.png" />
+      <Resource Include="Емблема_ДСНС_України.svg.png" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="sounds\" />
+    </ItemGroup>
+
+</Project>

@@ -1,0 +1,39 @@
+﻿<Window x:Class="ConfrontTheDanger.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ConfrontTheDanger"
+        mc:Ignorable="d"
+        Title="ConfrontTheDanger" Height="650" Width="400" WindowStyle="None">
+    <Window.Background>
+        <ImageBrush ImageSource="/forest.jpg"  Stretch="UniformToFill"/>
+    </Window.Background>
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="56"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Image Grid.Column="0" Source="/Емблема_ДСНС_України.svg.png" Stretch="UniformToFill"/>
+                <Grid Grid.Column="1" HorizontalAlignment="Right">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Image x:Name="SoundOnOff" Source="/sound.png" Grid.Column="0" Width="40" Height="38" Margin="0,11,10,11" MouseDown="SoundOn_Off_OnMouseDown" MouseMove="Event_OnMouseMove" MouseLeave="Event_OnMouseLeave" HorizontalAlignment="Right" RenderTransformOrigin="0.55,0.5"/>
+                    <Image x:Name="Logout" Grid.Column="1" Source="/logout.png" Width="40" Height="38" MouseDown="Exit_OnMouseDown" MouseMove="Event_OnMouseMove" MouseLeave="Event_OnMouseLeave"/>
+
+                </Grid>
+            </Grid>
+            <Frame x:Name="PagesArea" Grid.Row="1"/>
+
+
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,30 @@
+﻿<Page x:Class="ConfrontTheDanger.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ConfrontTheDanger"
+      mc:Ignorable="d"
+      Title="MainPage" Height="550" Width="408">
+    <Page.Resources>
+        <Style x:Key="ButtonStyleWithoutMouseOverHighlight" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+    <Grid>
+        <Border CornerRadius="51" Background="#94F76A" Height="92" Width="247" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0 0 0 125">
+            <Button x:Name="StartGame" Background="Transparent" Content="Розпочати" FontSize="43" FontFamily="Ink Free" BorderThickness="0" Style="{StaticResource ButtonStyleWithoutMouseOverHighlight}" MouseMove="StartGame_MouseMove" MouseLeave="StartGame_MouseLeave"
+                    Click="StartGame_Click"/>
+        </Border>
+    </Grid>
+</Page>
